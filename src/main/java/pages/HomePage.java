@@ -54,8 +54,25 @@ public class HomePage {
         return new AlertsPage(driver);
     }
 
+    public FileUploadPage clickFileUpload(){
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+
+    // This is used for modals
+    public EntryAdPage clickEntryAdPage(){
+        clickLink("Entry Ad");
+        return new EntryAdPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenuPage(){
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
     // Generic method to click links, private to narrow the usage
     private void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
     }
+
 }
