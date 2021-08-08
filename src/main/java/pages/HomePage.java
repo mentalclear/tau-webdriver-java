@@ -70,6 +70,16 @@ public class HomePage {
         return new ContextMenuPage(driver);
     }
 
+    public WysiwygEditorPage clickWysiwygEditor(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
+    public FramesPage clickFramesPage(){
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+
     // Generic method to click links, private to narrow the usage
     private void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
