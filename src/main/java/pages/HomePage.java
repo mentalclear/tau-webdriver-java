@@ -80,6 +80,11 @@ public class HomePage {
         return new FramesPage(driver);
     }
 
+    public DynamicLoadingPage clickDynamicLoading(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
+
     // Generic method to click links, private to narrow the usage
     private void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
