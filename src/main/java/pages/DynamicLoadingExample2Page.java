@@ -29,4 +29,9 @@ public class DynamicLoadingExample2Page {
     public String getLoadedText(){
         return  driver.findElement(loadedText).getText();
     }
+
+    // Chapter 11 challenge - Dmitrii
+    public boolean isStartButtonDisplayed(){
+        return driver.findElement(startButton).isDisplayed();
+    }
 }

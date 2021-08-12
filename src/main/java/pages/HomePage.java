@@ -95,6 +95,11 @@ public class HomePage {
         return new InfiniteScrollPage(driver);
     }
 
+    public MultipleWindowsPage clickMultipleWindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
     // Generic method to click links, private to narrow the usage
     private void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
